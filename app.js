@@ -22,7 +22,7 @@ userForm.addEventListener('submit', (e) => {
     const formData = new FormData(userForm);
     const newUser = createUser(formData);
     saveUser(newUser);
-    // window.location.replace('./list');
+    window.location.replace('./list');
 });
   // get user input(s)
   // do any needed work with the value(s)
