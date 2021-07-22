@@ -1,18 +1,39 @@
 const user = {
-    username: 'planty12',
-    password: 1234,
-    todos: [
+    username: 'planty11',
+    password: '1234',
+    toDos: [
         {
-            todo: 'water the garden',
+            todo: '',
             completed: false
-        },
-        {
-            todo: 'feed the dog',
-            completed: false
-        },
-        {
-            todo: 'walk the dog',
-            completed: true
-        },
-    ]
+        }]
 };
+
+const user2 = {
+    username: 'planty12',
+    password: '1234',
+    toDos: [
+        {
+            todo: '',
+            completed: false
+        }]
+};
+
+const user3 = {
+    username: 'planty13',
+    password: '1234',
+    toDos: [
+        {
+            todo: '',
+            completed: false
+        }]
+};
+
+
+
+const users = [
+    user,
+    user2,
+    user3
+];
+
+export default users;
