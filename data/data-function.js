@@ -1,9 +1,11 @@
-const USER = 'USER';
+let USER = 'USER';
+// const USERARR = 'USERARR';
 
 export function saveUser(userObject){
-    const userString = JSON.stringify(userObject);
+    let userString = JSON.stringify(userObject);
     localStorage.setItem(USER, userString);
 }
+
 
 export function getUser(){
     const userString = localStorage.getItem(USER);
@@ -21,3 +23,19 @@ export function findByUser(array, username) {
     return null;
 }
 
+// let existingEntries
+
+// export function saveUser2(existingEntries){
+//     existingEntries = JSON.parse(localStorage.getItem(USERARR));
+
+//     if (existingEntries === null) existingEntries = [];
+//     let userObject = {
+//         username:'',
+//         password:
+//     };
+
+//     localStorage.setItem('USER', JSON.stringify(userObject));
+//     existingEntries.push(userObject);
+//     localStorage.setItem('allEntries', JSON.stringify(existingEntries));
+//     return userObject;
+// }
