@@ -2,7 +2,7 @@
 // import { add } from '../calculator.js';
 
 import { createUser } from '../user/create-user.js';
-import findByUser from '../data/data-function.js';
+import { findByUser } from '../data/data-function.js';
 import users from '../data/user-data.js';
 
 const test = QUnit.test;
@@ -42,7 +42,7 @@ test('should create new user', (expect) => {
 
 test('does findByUser find user', (expect) => {
     const expected = {
-        username: 'planty12',
+        username: 'planty11',
         password: '1234',
         toDos: [
             {
@@ -51,7 +51,7 @@ test('does findByUser find user', (expect) => {
             },
         ] };
 
-    const actual = findByUser(users, 'planty12');
+    const actual = findByUser(users, 'planty11');
 
     expect.deepEqual(actual, expected);
 });

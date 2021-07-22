@@ -10,7 +10,7 @@ export function getUser(){
     return JSON.parse(userString);
 }
 
-function findByUser(array, username) {
+export function findByUser(array, username) {
     for (let index = 0; index < array.length; index++) {
         const item = array[index];
         if (item.username === username) {
@@ -21,4 +21,3 @@ function findByUser(array, username) {
     return null;
 }
 
-export default findByUser;

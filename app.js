@@ -1,6 +1,6 @@
 // import functions
 import { getUser, saveUser } from './data/data-function.js';
-
+import { createUser } from './user/create-user.js';
 
 // reference needed DOM elements
 
@@ -14,13 +14,14 @@ userForm.addEventListener('submit', (e) => {
     const formData = new FormData(userForm);
     const user = getUser(formData);
 
-    window.location.replace = './list';
+    // window.location.replace = './list';
 });
 
-createBtn.addEventListener('click', (e) => {
+createBtn.addEventListener('submit', (e) => {
     e.preventDefault();
     const formData = new FormData(userForm);
-    const newUser = saveUser(formData);
+    const newUser = createUser(formData);
+    saveUser(newUser);
 });
   // get user input(s)
   // do any needed work with the value(s)
