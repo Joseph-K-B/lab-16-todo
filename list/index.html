@@ -5,16 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../styles/reset.css">
     <link rel="stylesheet" href="../styles/user.css">
+    
 </head>
 <body>
-    <header>Your to-do list</header>
-
-
+    <header>
+    <h1>Your to-do list</h1>
+</header>
     <main>
+        <section>
+        <input type="text" placeholder='What To Do' id='to-do'>
         <button id='to-do-add'>Add</button>
-        To-Do<input type="text" id='to-do'>
+    </section>
         <div>
+            <p>To-Do:</p>
             <ul id='to-do-list'>
             </ul>
         </div>

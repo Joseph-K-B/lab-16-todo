@@ -34,11 +34,11 @@ logInBtn.addEventListener('click', (e) => {
     findByUser(formData);
     if (oldUser.password === formData.get('password')) {
         window.location.replace('./list');
+        return alert('Welcome Back');
     } else if (oldUser.password === !oldUser.password){
         // window.location.reload();
     } else {
-        
-        return alert('wrong password');
+        return alert('Wrong Password');
     }
 });
   // get user input(s)
