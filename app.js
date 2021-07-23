@@ -1,11 +1,11 @@
 // import functions
-import { getUser, saveUser, findByUser } from './data/data-function.js';
+import { saveUser } from './data/data-function.js';
 import { createUser } from './user/create-user.js';
 
 // reference needed DOM elements
 
 const userForm = document.getElementById('user-form');
-const createBtn = document.getElementById('create-btn');
+// const createBtn = document.getElementById('create-btn');
 
 // set event listeners 
 
