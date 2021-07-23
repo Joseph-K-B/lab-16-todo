@@ -43,7 +43,7 @@ if (user){
 }
 
 
-// IDEA TO MAKE THE FALSE GO TO TRUE... NEED TO CHANGE THE TARGET TO BUTTONS FOR IT TO WORK AND MATCH APPLES TO APPLES
+// EVENT LISTENER TO COMPLETE  TODO'S
 ul.addEventListener('click', (e)=> {
     if (e.target.tagName === 'LI'){
         e.target.classList.add('done'); 
