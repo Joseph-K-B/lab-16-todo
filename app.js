@@ -1,10 +1,12 @@
 // import functions
-import { saveUser } from './data/data-function.js';
+import { saveUser, getUser, findByUser } from './data/data-function.js';
 import { createUser } from './user/create-user.js';
 
 // reference needed DOM elements
 
 const userForm = document.getElementById('user-form');
+const logInBtn = document.getElementById('login-btn');
+// const 
 // const createBtn = document.getElementById('create-btn');
 
 // set event listeners 
@@ -23,6 +25,21 @@ userForm.addEventListener('submit', (e) => {
     const newUser = createUser(formData);
     saveUser(newUser);
     window.location.replace('./list');
+});
+
+logInBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const formData = new FormData(userForm);
+    const oldUser = getUser();
+    findByUser(formData);
+    if (oldUser.password === formData.get('password')) {
+        window.location.replace('./list');
+    } else if (oldUser.password === !oldUser.password){
+        // window.location.reload();
+    } else {
+        
+        return alert('wrong password');
+    }
 });
   // get user input(s)
   // do any needed work with the value(s)
