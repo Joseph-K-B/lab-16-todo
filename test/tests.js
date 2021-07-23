@@ -14,12 +14,8 @@ test('should create new user', (expect) => {
     const expected = {
         username: 'planty12',
         password: '1234',
-        toDos: [
-            {
-                todo: '',
-                completed: false
-            },
-        ] };
+        toDos: [] 
+    };
     const userData = new FormData();
     userData.set('username', 'planty12');
     userData.set('password', 1234);
