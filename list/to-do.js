@@ -19,3 +19,7 @@ addBtn.addEventListener('click', (e)=>{
     list.append(li);
     input.value = '';
 });
+const a = document.createElement('a');
+a.textContent = 'home'; 
+list.append(a);
+a.href = '../index.html';
